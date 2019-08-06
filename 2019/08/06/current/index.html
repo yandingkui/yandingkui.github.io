@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="xiaolang">
 <meta property="og:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-06T13:59:16.922Z">
+<meta property="og:updated_time" content="2019-08-06T14:00:09.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java并发知识笔记">
 <meta name="twitter:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
@@ -392,7 +392,7 @@
 <li>不可剥夺。线程获取到的资源在自己使用完之前不能被其它线程抢占，只有自己使用完毕之后才能释放</li>
 <li>环路等待。 存在线程-资源的环形链  </li>
 </ul>
-<p>如何避免死锁<br>至少破坏掉至少一个构造死锁的必要条件，目前只有请求持有和环路等待可以被破坏。</p>
+<p>如何避免死锁:<br>至少破坏掉至少一个构造死锁的必要条件，目前只有请求持有和环路等待可以被破坏。</p>
 <ol>
 <li>死锁避免</li>
 <li>死锁预防</li>
