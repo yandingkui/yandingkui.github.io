@@ -17,16 +17,20 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>xiaolang</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="xiaolang">
-<meta property="og:url" content="http://yandingkui.github.io/index.html">
+  <title>java并发知识笔记 | xiaolang</title>
+  <meta name="description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java并发知识笔记">
+<meta property="og:url" content="http://yandingkui.github.io/2019/08/06/current/index.html">
 <meta property="og:site_name" content="xiaolang">
+<meta property="og:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-06T12:21:20.475Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xiaolang">
+<meta name="twitter:title" content="java并发知识笔记">
+<meta name="twitter:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yandingkui.github.io/index.html">
+  <link rel="canonical" href="http://yandingkui.github.io/2019/08/06/current/index.html">
   
     <link rel="alternate" href="/atom.xml" title="xiaolang" type="application/atom+xml">
   
@@ -318,38 +322,40 @@
 </aside>
 
   
-  <main class="main" role="main">
   
-  <div class="content article-list">
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-current" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
+    <div class="article-header">
+      
+        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/06/current/">java并发知识笔记</a>
+    <h1 class="article-title" itemprop="name">
+      java并发知识笔记
     </h1>
   
 
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
+      
+      <div class="article-meta">
+        <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="/2019/08/06/current/" class="article-date">
-	  <time datetime="2019-08-06T11:59:47.589Z" itemprop="datePublished">8月 6</time>
+	  <time datetime="2019-08-06T11:59:47.589Z" itemprop="datePublished">2019-08-06</time>
 	</a>
 </span>
-    
+        
   <span class="article-category">
     <i class="icon icon-folder"></i>
     <a class="article-category-link" href="/categories/java基础知识/">java基础知识</a>
   </span>
 
-    
+        
 
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/06/current/#comments" class="article-comment-link">评论</a></span>
-    
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/06/current/#comments" class="article-comment-link">评论</a></span>
+        
 	
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 144(字)</span>
 	
@@ -357,247 +363,141 @@
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
 	
 
-  </p>
-</article>
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>参考书籍：java并发编程之美</p>
+<h4 id="线程的创建与运行"><a href="#线程的创建与运行" class="headerlink" title="线程的创建与运行"></a>线程的创建与运行</h4><p> Java 中有三种线程创建方式，分别为:</p>
+<ol>
+<li>实现 Runnable接口的 run方法;</li>
+<li>继承 Thread类 并重写 run 的方法;</li>
+<li>使用 FutureTask方式。</li>
+</ol>
+<h4 id="yield方法"><a href="#yield方法" class="headerlink" title="yield方法"></a>yield方法</h4><p>yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队列中选择一个优先级最高的线程，当然也有可能选到该线程。</p>
 
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
     
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://yandingkui.github.io/2019/08/06/current/" title="java并发知识笔记" target="_blank" rel="external">http://yandingkui.github.io/2019/08/06/current/</a>
+    </li>
     
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/04/Spring学习/">Spring学习</a>
-    </h1>
-  
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
 
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/yandingkui" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt>
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/yandingkui" target="_blank"><span class="text-dark">小狼</span><small class="ml-1x">Java Developer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
   </div>
+</div>
+
+
+    </div>
+  </article>
   
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/08/04/Spring学习/" class="article-date">
-	  <time datetime="2019-08-04T07:21:14.213Z" itemprop="datePublished">8月 4</time>
-	</a>
-</span>
     
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/Spring/">Spring</a>
-  </span>
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
 
-    
 
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/04/Spring学习/#comments" class="article-comment-link">评论</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 60(字)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/24/用数组来创建一棵树/">用数组来创建一棵树</a>
-    </h1>
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
   
-
-  </div>
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2019/08/04/Spring学习/" title="Spring学习"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
   
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/07/24/用数组来创建一棵树/" class="article-date">
-	  <time datetime="2019-07-24T08:24:34.638Z" itemprop="datePublished">7月 24</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/常用代码/">常用代码</a>
-  </span>
-
-    
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/07/24/用数组来创建一棵树/#comments" class="article-comment-link">评论</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 198(字)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/14/HowToBeatProcrastination/">怎样打败拖延</a>
-    </h1>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
   
-
-  </div>
   
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/07/14/HowToBeatProcrastination/" class="article-date">
-	  <time datetime="2019-07-14T06:03:59.567Z" itemprop="datePublished">7月 14</time>
-	</a>
-</span>
+  <div class="bar-right">
     
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/深度好文/">深度好文</a>
-  </span>
-
-    
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/07/14/HowToBeatProcrastination/#comments" class="article-comment-link">评论</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 494(字)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/06/docker_cdh/">docker CDH 搭建伪分布式集群</a>
-    </h1>
-  
-
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/07/06/docker_cdh/" class="article-date">
-	  <time datetime="2019-07-06T08:35:51.076Z" itemprop="datePublished">7月 6</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/操作教程/">操作教程</a>
-  </span>
-
-    
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/07/06/docker_cdh/#comments" class="article-comment-link">评论</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 275(字)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/04/LinkedList/">LinkedList操作总结</a>
-    </h1>
-  
-
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/06/04/LinkedList/" class="article-date">
-	  <time datetime="2019-06-03T16:25:31.641Z" itemprop="datePublished">6月 4</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/java基础知识/">java基础知识</a>
-  </span>
-
-    
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/06/04/LinkedList/#comments" class="article-comment-link">评论</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 207(字)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
-	
-
-  </p>
-</article>
-
-    
-      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="article-header">
-    
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/03/hello-world/">hexo 操作</a>
-    </h1>
-  
-
-  </div>
-  
-  <p class="article-meta">
-    <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2019/06/03/hello-world/" class="article-date">
-	  <time datetime="2019-06-03T15:29:43.628Z" itemprop="datePublished">6月 3</time>
-	</a>
-</span>
-    
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/工具操作/">工具操作</a>
-  </span>
-
-    
-
-    <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/06/03/hello-world/#comments" class="article-comment-link">评论</a></span>
-    
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 73(字)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
-	
-
-  </p>
-</article>
-
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
     
   </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫">
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫">
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class>
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-   
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -650,6 +550,33 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
    
 
 
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
