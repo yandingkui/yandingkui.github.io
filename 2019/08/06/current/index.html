@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="xiaolang">
 <meta property="og:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-06T13:16:06.561Z">
+<meta property="og:updated_time" content="2019-08-06T13:34:08.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java并发知识笔记">
 <meta name="twitter:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
@@ -357,7 +357,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/06/current/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 316(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 357(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -381,12 +381,16 @@
 <li>yield方法是让出自己的CPU时间，没有被阻塞，变成就绪状态</li>
 </ul>
 <h4 id="线程中断"><a href="#线程中断" class="headerlink" title="线程中断"></a>线程中断</h4><ul>
-<li><p>void interrupt() :中断线程。设置线程的中断标识，如果线程没有中断则继续执行，如果用了wait,sleep,join被阻塞挂起，就会抛出InterruptedException异常返回；</p>
-</li>
-<li><p>boolean isInterrupted(): 检测当前线程是否被中断，如果是返回true,如果不是返回false;</p>
-</li>
-<li><p>boolean interrupted():检测当前线程是否被中断。该方法如果发现当前线程被中断，就清除中断标识。</p>
-</li>
+<li>void interrupt() :中断线程。设置线程的中断标识，如果线程没有中断则继续执行，如果用了wait,sleep,join被阻塞挂起，就会抛出InterruptedException异常返回；</li>
+<li>boolean isInterrupted(): 获取当前线程的中断状态，如果是返回true,如果不是返回false;</li>
+<li>boolean interrupted():检测当前线程是否被中断。该方法如果发现当前线程被中断，就清除中断标识。</li>
+</ul>
+<h4 id="线程死锁"><a href="#线程死锁" class="headerlink" title="线程死锁"></a>线程死锁</h4><p>死锁满足4个条件：</p>
+<ul>
+<li>互斥条件。 共享资源只由一个线程占用</li>
+<li>请求并持有。</li>
+<li>不可剥夺</li>
+<li>环路等待</li>
 </ul>
 
       
