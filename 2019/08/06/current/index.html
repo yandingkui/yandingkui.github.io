@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="xiaolang">
 <meta property="og:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-06T12:21:20.475Z">
+<meta property="og:updated_time" content="2019-08-06T13:16:06.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java并发知识笔记">
 <meta name="twitter:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
@@ -357,7 +357,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/06/current/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 144(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 316(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -375,6 +375,19 @@
 <li>使用 FutureTask方式。</li>
 </ol>
 <h4 id="yield方法"><a href="#yield方法" class="headerlink" title="yield方法"></a>yield方法</h4><p>yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队列中选择一个优先级最高的线程，当然也有可能选到该线程。</p>
+<p>*sleep和yield的主要区别：  </p>
+<ul>
+<li>sleep会被阻塞挂起指定时间，这段时间内线程调度器不会去调用这个线程。</li>
+<li>yield方法是让出自己的CPU时间，没有被阻塞，变成就绪状态</li>
+</ul>
+<h4 id="线程中断"><a href="#线程中断" class="headerlink" title="线程中断"></a>线程中断</h4><ul>
+<li><p>void interrupt() :中断线程。设置线程的中断标识，如果线程没有中断则继续执行，如果用了wait,sleep,join被阻塞挂起，就会抛出InterruptedException异常返回；</p>
+</li>
+<li><p>boolean isInterrupted(): 检测当前线程是否被中断，如果是返回true,如果不是返回false;</p>
+</li>
+<li><p>boolean interrupted():检测当前线程是否被中断。该方法如果发现当前线程被中断，就清除中断标识。</p>
+</li>
+</ul>
 
       
     </div>
