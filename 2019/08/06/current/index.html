@@ -26,7 +26,7 @@
 <meta property="og:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://github.com/yandingkui/yandingkui.github.io/blob/master/images/blogimg/ThreadLocal.jpg?raw=true">
-<meta property="og:updated_time" content="2019-08-07T06:26:02.275Z">
+<meta property="og:updated_time" content="2019-08-07T06:33:38.880Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java并发知识笔记">
 <meta name="twitter:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
@@ -359,7 +359,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/06/current/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 891(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 960(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
@@ -404,7 +404,9 @@
 <li>破坏不可抢占条件<br>  当一个已经保持了某种不可抢占资源的进程，提出新资源请求不能被满足时，它必须释放已经保持的所有资源，以后需要时再重新申请。</li>
 <li>破坏循环等待条件<br>  对系统中的所有资源类型进行线性排序，然后规定每个进程必须按序列号递增的顺序请求资源。假如进程请求到了一些序列号较高的资源，然后有请求一个序列较低的资源时，必须先释放相同和更高序号的资源后才能申请低序号的资源。多个同类资源必须一起请求。</li>
 </ul>
-<h4 id="ThreadLocal"><a href="#ThreadLocal" class="headerlink" title="ThreadLocal"></a>ThreadLocal</h4><p>-ThreadLocal<br>ThreadLocal提供了线程本地变量,访问ThreadLocal变量的时候，每个线程都有自己本地的副本，操作的是自己本地内存里面的变量，从而避免了线程安全问题。<br>ThreadLocal实现原理：<br>ThreadLocal类图：<br><img src="https://github.com/yandingkui/yandingkui.github.io/blob/master/images/blogimg/ThreadLocal.jpg?raw=true" alt="ThreadLocal类图"></p>
+<h4 id="ThreadLocal"><a href="#ThreadLocal" class="headerlink" title="ThreadLocal"></a>ThreadLocal</h4><ul>
+<li>ThreadLocal<br>ThreadLocal提供了线程本地变量,访问ThreadLocal变量的时候，每个线程都有自己本地的副本，操作的是自己本地内存里面的变量，从而避免了线程安全问题。<br>ThreadLocal实现原理：<br>ThreadLocal类图：<br><img src="https://github.com/yandingkui/yandingkui.github.io/blob/master/images/blogimg/ThreadLocal.jpg?raw=true" alt="ThreadLocal类图"><br>Thread类中有一个threadLocals和inheritableThreadLocals,它们都是ThreadLocalMap类型的变量，而ThreadLocalMap是一个定制化的HashMap。在默认情况下，每个线程中的这两个变量都为null,只有当前线程第一次调用ThreadLocal的set或者get方法才回创建它们。</li>
+</ul>
 
       
     </div>
