@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="xiaolang">
 <meta property="og:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-06T14:00:09.122Z">
+<meta property="og:updated_time" content="2019-08-07T02:08:43.478Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java并发知识笔记">
 <meta name="twitter:description" content="参考书籍：java并发编程之美 线程的创建与运行 Java 中有三种线程创建方式，分别为:  实现 Runnable接口的 run方法; 继承 Thread类 并重写 run 的方法; 使用 FutureTask方式。  yield方法yield : Thread 类中的一个静态方法，当一个线程调用yield方法的时候，当前线程就会让出CPU的使用权，然后处于就绪状态，线程调度器就会从就绪状态的队">
@@ -357,10 +357,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/06/current/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 483(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 825(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
 	
 
       </div>
@@ -394,9 +394,14 @@
 </ul>
 <p>如何避免死锁:<br>至少破坏掉至少一个构造死锁的必要条件，目前只有请求持有和环路等待可以被破坏。</p>
 <ol>
-<li>死锁避免</li>
+<li>死锁避免<br>银行家算法</li>
 <li>死锁预防</li>
 </ol>
+<ul>
+<li>破坏请求和保持条件<br>  协议1:所有进程开始前，必须一次性地申请所需的所有资源，这样运行期间就不会再提出资源要求，破坏了请求条件，即使有一种资源不能满足需求，也不会给它分配正在空闲的资源，这样它就没有资源，就破坏了保持条件，从而预防死锁的发生。<br>  协议2:允许一个进程只获得初期的资源就开始运行，然后再把运行完的资源释放出来。然后再请求新的资源。</li>
+<li>破坏不可抢占条件<br>  当一个已经保持了某种不可抢占资源的进程，提出新资源请求不能被满足时，它必须释放已经保持的所有资源，以后需要时再重新申请。</li>
+<li>破坏循环等待条件<br>  对系统中的所有资源类型进行线性排序，然后规定每个进程必须按序列号递增的顺序请求资源。假如进程请求到了一些序列号较高的资源，然后有请求一个序列较低的资源时，必须先释放相同和更高序号的资源后才能申请低序号的资源。多个同类资源必须一起请求。</li>
+</ul>
 
       
     </div>
