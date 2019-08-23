@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="xiaolang">
 <meta property="og:description" content="java基础 Integer A = 100, B = 100 A == B？C = 150，D = 150， C == D？答：True,False; JVM中一个字节下的整型数据（即[-128,127])会在JVM启动时加载进内存，所以除非用new Integer()显示的创建对象，否则都是同一对象。上面A，B小于127并且并非使用new Integer来创建的对象，所以是相等的。然而C，D都">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-23T02:36:43.090Z">
+<meta property="og:updated_time" content="2019-08-23T03:11:51.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java 后端开发面经总结">
 <meta name="twitter:description" content="java基础 Integer A = 100, B = 100 A == B？C = 150，D = 150， C == D？答：True,False; JVM中一个字节下的整型数据（即[-128,127])会在JVM启动时加载进内存，所以除非用new Integer()显示的创建对象，否则都是同一对象。上面A，B小于127并且并非使用new Integer来创建的对象，所以是相等的。然而C，D都">
@@ -357,7 +357,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/08/22/面经总结/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 255(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 499(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -372,11 +372,11 @@
 </li>
 <li><p>HashMap</p>
 <ul>
-<li><p>HashMap的put过程<br>hash(key)计算hash值（注意：&gt;&gt;&gt;16,扰动 -&gt; 获得表数组tab,判断是否扩容（注意：容量是前面容量的2倍 ） -&gt; 计算槽的位置（注意：hash &amp;(n-1) == hash%n）-&gt; 如果槽空，则放入槽中 -&gt; 如果槽中是一个树节点，则插入红黑树 -&gt; 如果是一个链表如果插入后节点数目小于阈值，那么插入，如果达到了阈值就变成一棵红黑树</p>
+<li><p>HashMap的put过程<br>hash(key)计算hash值（注意：&gt;&gt;&gt;16,扰动 -&gt; 获得表数组tab,判断是否扩容（注意：容量是前面容量的2倍 ） -&gt; 计算槽的位置（注意：hash &amp;(n-1) == hash%n）-&gt; 如果槽空，则放入槽中 -&gt; 如果槽中是一个树节点，则插入红黑树 -&gt; 如果是一个链表如果插入后节点数目小于阈值，那么插入，如果达到了阈值就变成一棵红黑树 （先将节点变成树节点，然后构建红黑树）-&gt;如果存在key,就替换一下value.</p>
 </li>
-<li><p>HashMap 在rehash的时候回产生什么问题</p>
+<li><p>HashMap 在rehash的时候会产生什么问题<br>HashMap 在rehash的时候，最需要注意的问题就是处理节点冲突（以前在不同的桶中的节点可能会到同一个桶，以前取余相同但是hash值不同的可能会到不同的桶中）。 HashMap每次扩容都是扩容到前面的两倍，这样的好处就是，节点要么在原来的桶中要么在现在的槽+oldSize的桶中，这样就保证了原来不在同一个桶中的节点，就算重新分配也不会在同一个桶中。同时也只会影响到两个槽，这样更容易实现细粒度并发控制。</p>
 </li>
-<li><p>Java的hashmap和hashtable的两个区别</p>
+<li><p>Java的hashmap和hashtable的两个区别<br>hashmap是非线程安全的，hashtable是线程安全的。hashtable 中的方法使用了synchronized进行了修饰，从而能够保证线程安全，但是这种同步的粒度太大，效率不高。</p>
 </li>
 </ul>
 </li>
